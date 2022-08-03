@@ -1,0 +1,4 @@
+<mat-progress-bar *ngIf="recipes == null" mode="indeterminate"></mat-progress-bar>
+<div class="content" *ngIf="recipes != null">
+  <recipe *ngFor="let recipe of recipes" [item]="recipe"></recipe>
+</div>
