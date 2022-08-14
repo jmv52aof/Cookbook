@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IRecipe } from './recipe.interface';
+import { IRecipe } from '../../models/recipe.interface';
 import { Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 

@@ -1,0 +1,62 @@
+.header
+{
+  margin: 44px 0;
+}
+
+.login
+{
+  float: right;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.login:hover
+{
+  cursor: pointer;
+}
+
+h1
+{
+  display: inline-block;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+
+  color: #FDB100;
+
+  margin-right: 80px;
+}
+
+a
+{
+  display: inline-block;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+
+  color: #9196A1;
+  margin-right: 40px;
+}
+
+.active
+{
+  font-weight: 600;
+  color: #3A3C41;
+}
+
+span
+{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+
+  color: #FDB100;
+  margin-left: 7px;
+}

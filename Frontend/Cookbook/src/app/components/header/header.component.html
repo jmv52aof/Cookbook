@@ -1,0 +1,12 @@
+<div class="header">
+  <h1>Recipes</h1>
+
+  <a routerLinkActive="active" routerLink="/main">Главная</a>
+  <a routerLinkActive="active" routerLink="/recipes">Рецепты</a>
+  <a routerLinkActive="active" routerLink="/favorite">Избранное</a>
+
+  <div (click)="openAuthorizationDialog()" class="login">
+    <img src="assets/img/login.png">
+    <span>Войти</span>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
-import { IRecipe } from '../shared/recipe.interface';
+import { IRecipe } from "../../models/recipe.interface";
 import { Router } from '@angular/router';
 
 @Component({

@@ -1,0 +1,13 @@
+<header></header>
+<div class="button-back" (click)="backClicked()">
+  <img src="assets/img/arrow-back.svg">
+  <p>Назад</p>
+</div>
+<mat-progress-bar *ngIf="recipe == null" mode="indeterminate"></mat-progress-bar>
+<div *ngIf="recipe != null">
+  <h1>
+    {{ recipe.name }}
+  </h1>
+  <recipe [item]="recipe"></recipe>
+</div>
+<footer></footer>

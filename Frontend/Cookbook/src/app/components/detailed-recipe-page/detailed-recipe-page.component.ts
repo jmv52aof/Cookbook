@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RecipeService } from "../shared/recipe.service";
-import { IRecipe } from "../shared/recipe.interface";
+import { RecipeService } from "../../services/recipe/recipe.service";
+import { IRecipe } from "../../models/recipe.interface";
 import { ActivatedRoute } from '@angular/router';
 import { EventEmitter, Input, Output } from "@angular/core";
 import { Location } from "@angular/common";
