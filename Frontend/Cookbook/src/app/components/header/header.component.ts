@@ -12,10 +12,15 @@ export class HeaderComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+
   }
 
   openAuthorizationDialog() {
     this.dialog.closeAll();
     this.dialog.open(DialogAuthorizationComponent);
+  }
+
+  getName() {
+    return sessionStorage.getItem('name');
   }
 }

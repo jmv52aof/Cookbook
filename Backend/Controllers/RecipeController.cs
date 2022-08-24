@@ -36,7 +36,8 @@ public class RecipeController : ControllerBase
     {
         try
         {
-            return Ok( _recipeService.GetById( id ).ConvertToRecipeDto() );
+            var recipe = _recipeService.GetById( id );
+            return Ok( recipe.ConvertToRecipeDto() );
         }
         catch ( Exception ex )
         {

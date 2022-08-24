@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogRegistrationComponent } from '../dialog-registration/dialog-registration.component';
+import { AccountService } from '../../services/account/account.service';
 
 @Component({
   selector: 'dialog-authorization',
@@ -8,8 +9,13 @@ import { DialogRegistrationComponent } from '../dialog-registration/dialog-regis
   styleUrls: ['./dialog-authorization.component.scss']
 })
 export class DialogAuthorizationComponent implements OnInit {
+  constructor(
+    private dialog: MatDialog,
+    private accountService: AccountService
+  ) { }
 
-  constructor(public dialog: MatDialog) { }
+  login: string;
+  password: string;
 
   ngOnInit(): void {
   }
@@ -17,5 +23,13 @@ export class DialogAuthorizationComponent implements OnInit {
   openRegistrationDialog() {
     this.dialog.closeAll();
     this.dialog.open(DialogRegistrationComponent);
+  }
+
+  getUser() {
+    this.accountService.getToken( this.login, this.password ).subscribe( item => sessionStorage.setItem( 'token', item.token ) );
+    this.accountService.getAccount( sessionStorage.getItem( 'token' ) ?? "", this.login ).subscribe( item =>
+      sessionStorage.setItem('name', item.name )
+    );
+    this.dialog.closeAll();
   }
 }

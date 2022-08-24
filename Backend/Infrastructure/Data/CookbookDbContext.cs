@@ -7,6 +7,7 @@ using Cookbook.Infrastructure.Configurations;
 public class CookbookDbContext : DbContext
 {
     public DbSet<Recipe> Recipe { get; set; }
+    public DbSet<Account> Account { get; set; }
 
     public CookbookDbContext( DbContextOptions options ) : base( options )
     {

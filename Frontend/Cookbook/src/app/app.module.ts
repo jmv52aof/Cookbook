@@ -7,6 +7,7 @@ import { RecipesPageComponent } from './components/recipes-page/recipes-page.com
 import { RecipeComponent } from './components/recipe/recipe.component';
 import { DetailedRecipePageComponent } from './components/detailed-recipe-page/detailed-recipe-page.component';
 import { RecipeService } from './services/recipe/recipe.service';
+import { AccountService } from './services/account/account.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
@@ -18,7 +19,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { DialogRegistrationComponent } from './components/dialog-registration/dialog-registration.component';
 import { FormsModule } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DialogAuthorizationComponent } from './components/dialog-authorization/dialog-authorization.component';
 import { DialogAuthChooseComponent } from './components/dialog-auth-choose/dialog-auth-choose.component';
 
@@ -46,10 +48,12 @@ import { DialogAuthChooseComponent } from './components/dialog-auth-choose/dialo
     MatDialogModule,
     MatFormFieldModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule
   ],
   providers: [
-    RecipeService
+    RecipeService,
+    AccountService
   ],
   bootstrap: [AppComponent]
 })

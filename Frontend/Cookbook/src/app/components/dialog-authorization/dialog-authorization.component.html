@@ -3,15 +3,15 @@
   <div mat-dialog-content align="center">
     <mat-form-field appearance="outline">
       <mat-label>Логин</mat-label>
-      <input matInput>
+      <input matInput [(ngModel)]="login">
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Пароль</mat-label>
-      <input matInput>
+      <input type="password" matInput [(ngModel)]="password">
     </mat-form-field>
   </div>
   <div mat-dialog-actions align="center">
-    <button mat-flat-button class="btn-filled">Войти</button>
+    <button (click)="getUser()" mat-flat-button class="btn-filled">Войти</button>
     <button mat-stroked-button mat-dialog-close class="btn-stroked">Отмена</button>
   </div>
   <a (click)="openRegistrationDialog()" class="switch-auth-link">У меня ещё нет аккаунта</a>
