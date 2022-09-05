@@ -1,0 +1,76 @@
+.dialog
+{
+  margin: 60px;
+}
+
+h1
+{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+mat-form-field
+{
+  width: 580px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+
+  display: block;
+}
+
+button
+{
+  width: 250px;
+
+  height: 60px;
+  border-radius: 16px;
+  margin-top: 42px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.btn-filled
+{
+  background: #FDB100;
+  color: #FFF;
+  margin-right: 27px;
+}
+
+.btn-stroked
+{
+  border-color: #FDB100;
+  color: #FDB100;
+  background-color: #FFF;
+}
+
+.switch-auth-link
+{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  /* or 156% */
+
+  color: #FDB100;
+  display: block;
+  width: 244px;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  border-bottom: 1px dashed #FDB100;
+}
+
+.switch-auth-link:hover
+{
+  cursor: pointer;
+}

@@ -1,0 +1,10 @@
+<div class="dialog">
+  <h1 mat-dialog-title>Войдите в профиль</h1>
+  <div mat-dialog-content>
+    <p class="description">Добавлять рецепты могут только зарегистрированные пользователи.</p>
+  </div>
+  <div mat-dialog-actions align="center">
+    <button (click)="openAuthorizationDialog()" mat-flat-button class="btn-filled">Войти</button>
+    <button (click)="openRegistrationDialog()" mat-stroked-button mat-dialog-close class="btn-stroked">Регистрация</button>
+  </div>
+</div>

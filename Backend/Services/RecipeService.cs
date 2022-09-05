@@ -29,4 +29,10 @@ public class RecipeService : IRecipeService
         _unitOfWork.Commit();
         return recipe;
     }
+
+    public void Add( Recipe recipe )
+    {
+        _recipeRepository.Add( recipe );
+        _unitOfWork.Commit();
+    }
 }

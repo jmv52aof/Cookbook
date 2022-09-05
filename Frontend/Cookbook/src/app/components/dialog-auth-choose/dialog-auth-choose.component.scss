@@ -1,0 +1,68 @@
+.dialog
+{
+  margin: 60px;
+}
+
+h1
+{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+mat-form-field
+{
+  width: 580px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+
+  display: block;
+}
+
+button
+{
+  width: 250px;
+
+  height: 60px;
+  border-radius: 16px;
+  margin-right: 24px;
+  margin-top: 42px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.btn-filled
+{
+  background: #FDB100;
+  color: #FFF;
+}
+
+.btn-stroked
+{
+  border-color: #FDB100;
+  color: #FDB100;
+  background-color: #FFF;
+}
+
+.description
+{
+  margin-top: 30px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  /* or 156% */
+
+  font-feature-settings: 'case' on;
+
+  color: #4A525A;
+}

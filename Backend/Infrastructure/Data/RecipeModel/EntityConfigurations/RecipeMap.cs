@@ -12,6 +12,7 @@ public class RecipeMap : IEntityTypeConfiguration<Recipe>
         builder.Property( x => x.Id ).ValueGeneratedOnAdd();
         builder.Property( x => x.Name ).HasMaxLength( 255 ).IsRequired();
         builder.Property( x => x.ShortDescription ).HasMaxLength( 511 ).IsRequired();
-        builder.Property( x => x.FullDescription ).HasMaxLength( 4000 ).IsRequired();
+        builder.Property( x => x.CookTimeMinutes ).IsRequired();
+        builder.Property( x => x.Portions ).IsRequired();
     }
 }

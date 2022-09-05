@@ -1,0 +1,18 @@
+<div class="header">
+  <h1>Recipes</h1>
+
+  <a routerLinkActive="active" routerLink="/main">Главная</a>
+  <a routerLinkActive="active" routerLink="/recipes">Рецепты</a>
+  <a routerLinkActive="active" routerLink="/favorite">Избранное</a>
+
+  <div *ngIf="getName() == ''" (click)="openAuthorizationDialog()" class="login">
+    <img src="assets/img/login.svg">
+    <span>Войти</span>
+  </div>
+
+  <div *ngIf="getName() != ''" class="name">
+    <img src="assets/img/login.svg">
+    <span>Привет, {{ getName() }}!</span>
+    <img (click)="exit()" class="btn-exit" src="assets/img/exit_to_app.svg">
+  </div>
+</div>

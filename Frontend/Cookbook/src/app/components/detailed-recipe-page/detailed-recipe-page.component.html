@@ -1,0 +1,29 @@
+<header></header>
+<div class="button-back" (click)="backClicked()">
+  <img src="assets/img/arrow-back.svg">
+  <p>Назад</p>
+</div>
+<mat-progress-bar *ngIf="recipe == null" mode="indeterminate"></mat-progress-bar>
+<div *ngIf="recipe != null">
+  <h1>
+    {{ recipe.name }}
+  </h1>
+  <recipe [item]="recipe"></recipe>
+</div>
+<div class="recipe-continuation">
+  <div class="ingridients">
+    <h2 class="ingridients-title">Ингридиенты</h2>
+    <div class="ingridient-block" *ngFor="let item of ingridients">
+      <h3 class="ingridient-title">{{ item.title }}</h3>
+      <p class="ingridient-text">{{ item.text }}</p>
+    </div>
+  </div>
+  <div class="steps">
+    <div class="step-block" *ngFor="let item of steps; index as i">
+      <h2 class="step-title">Шаг {{ i + 1 }}</h2>
+      <p class="step-text">{{ item.text }}</p>
+    </div>
+    <p class="wishing">Приятного Аппетита!</p>
+  </div>
+</div>
+<footer></footer>
