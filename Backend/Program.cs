@@ -36,6 +36,12 @@ builder.Services.AddScoped<IRecipeService, RecipeService>();
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 
+builder.Services.AddScoped<IStepRepository, StepRepository>();
+builder.Services.AddScoped<IStepService, StepService>();
+
+builder.Services.AddScoped<IIngridientRepository, IngridientRepository>();
+builder.Services.AddScoped<IIngridientService, IngridientService>();
+
 builder.Services.AddDataProtection().UseCryptographicAlgorithms(
     new AuthenticatedEncryptorConfiguration
     {

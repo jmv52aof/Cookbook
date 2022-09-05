@@ -16,6 +16,8 @@ public class AccountService : IAccountService
         _unitOfWork = unitOfWork;
     }
 
+    // TODO: Remove from Read UoW
+
     public Account GetById( int id )
     {
         var account = _accountRepository.GetById( id );

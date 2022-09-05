@@ -23,6 +23,9 @@ public class AccountController : ControllerBase
 
     [Authorize]
     [HttpGet]
+    // TODO: Token expiration
+    // TODO: Claims
+    // TODO: Mitigations SQL
     [Route( "account/get/{login}" )]
     public IActionResult GetAccount( string login )
     {

@@ -10,7 +10,8 @@ public static class RecipeDtoExtension
             recipeDto.Id,
             recipeDto.Name ?? "",
             recipeDto.ShortDescription ?? "",
-            recipeDto.FullDescription ?? ""
+            recipeDto.CookTimeMinutes,
+            recipeDto.Portions
         );
     }
 
@@ -21,7 +22,8 @@ public static class RecipeDtoExtension
             Id = recipe.Id,
             Name = recipe.Name ?? "",
             ShortDescription = recipe.ShortDescription ?? "",
-            FullDescription = recipe.FullDescription ?? ""
+            CookTimeMinutes = recipe.CookTimeMinutes,
+            Portions = recipe.Portions
         };
     }
 }

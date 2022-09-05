@@ -18,6 +18,7 @@ public class AccountRepository : IAccountRepository
         var account = _dbContext.Account.FirstOrDefault( x => x.Id == id );
         if ( account == null )
         {
+            // TODO: Exception, Frontend
             return new Account( 0, "", "", "" );
         }
         return account;

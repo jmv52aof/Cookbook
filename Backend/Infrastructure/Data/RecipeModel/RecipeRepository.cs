@@ -23,8 +23,13 @@ public class RecipeRepository : IRecipeRepository
         var recipe = _dbContext.Recipe.FirstOrDefault( x => x.Id == id );
         if ( recipe == null )
         {
-            return new Recipe( 0, "", "", "" );
+            return new Recipe( 0, "", "", 0, 0 );
         }
         return recipe;
+    }
+
+    public void Add( Recipe recipe )
+    {
+        _dbContext.Recipe.Add( recipe );
     }
 }

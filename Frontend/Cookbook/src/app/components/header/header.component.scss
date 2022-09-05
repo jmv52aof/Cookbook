@@ -11,7 +11,33 @@
   margin: 0;
 }
 
-.login:hover
+.name
+{
+  float: right;
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  position: absolute;
+  height: 22px;
+  left: 1092px;
+  top: 48px;
+  
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  
+  color: #FDB100;  
+}
+
+span
+{
+  margin: 0 8px;
+}
+
+.login:hover, .btn-exit
 {
   cursor: pointer;
 }

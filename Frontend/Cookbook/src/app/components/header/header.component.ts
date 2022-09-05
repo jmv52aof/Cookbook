@@ -21,6 +21,11 @@ export class HeaderComponent implements OnInit {
   }
 
   getName() {
-    return sessionStorage.getItem('name');
+    return sessionStorage.getItem('name') ?? '';
+  }
+
+  exit() {
+    sessionStorage.setItem('name', '');
+    sessionStorage.setItem('token', '');
   }
 }

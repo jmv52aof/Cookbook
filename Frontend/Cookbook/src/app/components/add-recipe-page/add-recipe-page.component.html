@@ -1,0 +1,76 @@
+<header></header>
+<div class="top-navigation">
+  <div>
+    <div class="button-back" (click)="backClicked()">
+      <img src="assets/img/arrow-back.svg">
+      <p>Назад</p>
+    </div>
+    <h1>Добавить новый рецепт</h1>
+  </div>
+  <button (click)="publishRecipe(recipe)" class="btn-filled" mat-stroked-button color="primary">
+    Опубликовать
+  </button>
+</div>
+<div class="recipe-template">
+  <div class="image-template">
+    <div class="dashed-tip">
+      <img src="assets/img/bi_cloud-download.svg">
+      <p class="tip-description">Загрузите фото готового блюда</p>
+    </div>
+  </div>
+  <div class="recipe-template-form">
+    <mat-form-field appearance="outline">
+      <mat-label>Название рецепта</mat-label>
+      <input matInput [(ngModel)]="recipe.name">
+    </mat-form-field>
+    <mat-form-field class="recipe-description" appearance="outline">
+      <mat-label>Краткое описание рецепта (150 символов)</mat-label>
+      <textarea matInput [(ngModel)]="recipe.shortDescription"></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Добавить теги</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <div class="input-numbers">
+      <div class="half-input">
+        <mat-form-field class="half-input" appearance="outline">
+          <mat-label>Время готовки</mat-label>
+          <input type="number" min="1" matInput [(ngModel)]="recipe.cookTimeMinutes">
+        </mat-form-field>
+        <p class="half-input-description">Минут</p>
+      </div>
+      <div class="half-input">
+        <mat-form-field class="half-input" appearance="outline">
+          <mat-label>Порций в блюде</mat-label>
+          <input type="number" min="1" matInput [(ngModel)]="recipe.portions">
+        </mat-form-field>
+        <p class="half-input-description">Персон</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="recipe-continuation">
+  <div class="ingridients">
+    <h2>Ингридиенты</h2>
+    <div *ngFor="let item of ingridients">
+      <img (click)="deleteIngridient(item)" class="cross" src="assets/img/cross.svg">
+      <ingridient-template [item]="item"></ingridient-template>
+    </div>
+    <button (click)="addIngridient()" class="btn-stroked" mat-stroked-button color="primary">
+      <img class="plus-icon" src="assets/img/plus-yellow.svg">
+      Добавить заголовок
+    </button>
+  </div>
+  <div class="steps">
+    <div *ngFor="let item of steps; index as i">
+      <h2 class="step-title">Шаг {{ i + 1 }}</h2>
+      <img (click)="deleteStep(item)" class="cross" src="assets/img/cross.svg">
+      <step-template [item]="item"></step-template>
+    </div>
+    <button (click)="addStep()" class="btn-stroked" mat-stroked-button color="primary">
+      <img class="plus-icon" src="assets/img/plus-yellow.svg">
+      Добавить шаг
+    </button>
+  </div>
+</div>
+<footer></footer>

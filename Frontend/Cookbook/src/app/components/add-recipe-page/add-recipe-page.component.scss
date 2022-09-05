@@ -1,0 +1,232 @@
+.button-back
+{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FDB100;
+}
+
+.button-back img
+{
+  float: left;
+  padding: 5px;
+  margin-right: 5px;
+
+}
+
+.button-back:hover
+{
+  cursor: pointer;
+}
+
+.recipe-template
+{
+    display: flex;
+    margin-top: 40px;
+    border: none;
+    height: 430px;
+    box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
+    border-radius: 24px;
+    padding: 0;
+}
+
+.input-numbers
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.half-input
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50%;
+}
+
+.half-input-description
+{
+
+    padding-bottom: 6px; /* adjust to center */
+    margin-left: 45px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #25292D;
+}
+
+.image-template
+{
+    order: 0;
+    width: 430px;
+    height: 430px;
+    background: linear-gradient(0deg, #FFEFCC, #FFEFCC), #FFFCF7;
+    border-radius: 72px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-continuation
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.cross
+{
+    float: right;
+    margin: 20px;
+}
+
+.cross:hover
+{
+    cursor: pointer;
+}
+
+.dashed-tip
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 269px;
+    height: 269px;
+    border: 1px dashed #F29E1F;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 60px;
+}
+
+.tip-description
+{
+    display: block;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+
+    color: #F29E1F;
+}
+
+.recipe-template-form
+{
+    margin: 50px;
+    width: 700px;
+}
+
+.ingridients
+{
+    flex-grow: 40%;
+}
+
+.steps
+{
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+textarea
+{
+    resize: none;
+    max-height: 60px;
+    min-height: 60px;
+}
+
+mat-form-field
+{
+    width: 650px;
+}
+
+h1
+{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 62px;
+  color: #25292D;
+
+  margin-top: 11px;
+}
+
+h2
+{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: #4A525A;
+}
+
+.step-title
+{
+  float: left;
+  margin-left: 38px;
+  margin-top: 40px;
+}
+
+mat-progress-bar
+{
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 200px;
+
+  width: 300px;
+  height: 10px;
+}
+
+
+button
+{
+  height: 60px;
+  border-radius: 16px;
+  display: block;
+  margin: auto;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.btn-stroked
+{
+  border-color: #FDB100;
+  color: #FDB100;
+  width: 380px;
+  margin-top: 40px;
+}
+
+.btn-filled
+{
+  width: 278px;
+  background: #FDB100;
+  color: #FFF;
+  border: none;
+  margin: 0;
+}
+
+.top-navigation
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plus-icon
+{
+  margin-right: 23px;
+}

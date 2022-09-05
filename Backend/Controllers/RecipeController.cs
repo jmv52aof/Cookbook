@@ -1,6 +1,10 @@
 namespace Cookbook.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authorization;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using Cookbook.Services;
 using Cookbook.Dto;
 using Cookbook.Domain;
@@ -38,6 +42,23 @@ public class RecipeController : ControllerBase
         {
             var recipe = _recipeService.GetById( id );
             return Ok( recipe.ConvertToRecipeDto() );
+        }
+        catch ( Exception ex )
+        {
+            return BadRequest( ex.Message );
+        }
+    }
+
+    [Authorize]
+    [HttpPost]
+    [Route( "recipe/add" )]
+    public IActionResult Add( [FromBody] RecipeDto recipeDto )
+    {
+        try
+        {
+            var recipe = recipeDto.ConvertToRecipe();
+            _recipeService.Add( recipe );
+            return Ok( recipe.Id );
         }
         catch ( Exception ex )
         {
